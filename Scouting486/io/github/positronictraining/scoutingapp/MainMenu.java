@@ -1,4 +1,4 @@
-package scoutingApp;
+package io.github.positronictraining.scoutingapp;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

@@ -1,4 +1,4 @@
-package scoutingApp;
+package io.github.positronictraining.scoutingapp;
 
 public class Main {
 
