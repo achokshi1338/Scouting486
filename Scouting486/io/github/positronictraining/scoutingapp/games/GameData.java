@@ -1,12 +1,12 @@
-package gamedata;
+package io.github.positronictraining.scoutingapp.games;
 
 import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
-@XStreamAlias("game")
-public class Game{
+@XStreamAlias("gamedata")
+public class GameData{
 	
 	@XStreamAlias("name")
 	private String name;
@@ -22,5 +22,5 @@ public class Game{
 	private String[] victor;
 	
 	@XStreamImplicit(itemFieldName="period")
-	private List<Period> periods;
+	private List<PeriodData> periods;
 }
