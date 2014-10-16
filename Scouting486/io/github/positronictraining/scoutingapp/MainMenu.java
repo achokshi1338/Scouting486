@@ -1,4 +1,4 @@
-package scouting486;
+package io.github.positronictraining.scoutingapp;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -11,13 +11,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class MainMenu extends JFrame implements ActionListener {
+public class MainMenu extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JButton btnTeamStatistics;
 	private JButton btnNewMatch;
 	private JButton btnNewRobot;
 	private JButton btnQrCode;
-	public MainMenu(){
+	
+	public MainMenu() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //sets up main menu frame
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -83,3 +85,4 @@ public class MainMenu extends JFrame implements ActionListener {
 		}
 	}
 }
+

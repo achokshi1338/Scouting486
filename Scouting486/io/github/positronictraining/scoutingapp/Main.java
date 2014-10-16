@@ -1,4 +1,4 @@
-package scouting486;
+package io.github.positronictraining.scoutingapp;
 
 public class Main {
 
@@ -6,5 +6,4 @@ public class Main {
 		// TODO Auto-generated method stub
 		MainMenu mainMenu = new MainMenu();
 	}
-
 }
