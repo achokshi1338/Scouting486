@@ -1,6 +1,5 @@
 package scoutingapp;
 
-import java.util.Arrays;
 import java.util.ArrayList;
 
 public class Match {
@@ -10,10 +9,9 @@ public class Match {
 	private int blueAllianceScore;
 	private int redAllianceScore;
 	public String gameComments;
-	private Point[] pointsScored;
-	private ArrayList<Point> pointsScoredList = new ArrayList<Point>(Arrays.asList(pointsScored));
-	private Point[] penalties;
-	private ArrayList<Point> penaltiesList = new ArrayList<Point>(Arrays.asList(penalties));
+	private ArrayList<Point> pointsScored;
+	private ArrayList<Point> penalties;
+	private Game game;
 	
 	public Match(int red1, int red2, int red3, int blue1, int blue2, int blue3){
 		this.redAlliance[0] = red1;
@@ -24,50 +22,43 @@ public class Match {
 		this.blueAlliance[2] = red3;
 	}
 	
-	public void pointScored(String pointName, int pointValue, int scoringTeam, String period, String alliance){
-		Point newScoredPoint = new Point(pointName,pointValue,scoringTeam, period);
-		pointsScoredList.add(newScoredPoint);
-		this.pointsScored = (Point[]) pointsScoredList.toArray();
+	public void pointScored(int pointTypeIndex, int scoringTeam, String alliance){
+		Point newScoredPoint = new Point((Point)game.pointTypes.toArray()[pointTypeIndex],scoringTeam);
+		pointsScored.add(newScoredPoint);
 		if (alliance == "red"){
-			redAllianceScore = redAllianceScore + pointValue;
+			redAllianceScore = redAllianceScore + ((Point)game.pointTypes.toArray()[pointTypeIndex]).getPointValue();
 		}
 		else{
-			blueAllianceScore = blueAllianceScore + pointValue;
+			blueAllianceScore = blueAllianceScore + ((Point)game.pointTypes.toArray()[pointTypeIndex]).getPointValue();
 		}
 	}
 	
-	public void penalty(String penaltyDescription, int penaltyValue, int penalizedTeam, String allianceEffected){
-		Point newPenalty = new Point(penaltyDescription, penaltyValue, penalizedTeam, "penalty");
-		penaltiesList.add(newPenalty);
-		this.penalties = (Point[]) penaltiesList.toArray();
+	public void penalty(int pointTypeIndex, int penalizedTeam, String allianceEffected){
+		Point newPenalty = new Point((Point)game.pointTypes.toArray()[pointTypeIndex], penalizedTeam);
+		penalties.add(newPenalty);
 		if (allianceEffected == "red"){
-			redAllianceScore = redAllianceScore - penaltyValue;
+			redAllianceScore = redAllianceScore - ((Point) game.pointTypes.toArray()[pointTypeIndex]).getPointValue();
 		}
 		else{
-			blueAllianceScore = blueAllianceScore - penaltyValue;
+			blueAllianceScore = blueAllianceScore - ((Point) game.pointTypes.toArray()[pointTypeIndex]).getPointValue();
 		}
 	}
 	
-	public Point[] getPointsScored(){
-		return pointsScored;	
+	public ArrayList<Point> getPointsScored(){
+		return pointsScored;
 	}
-	
-	public Point[] getPenalties(){
+	public ArrayList<Point> getPenalties(){
 		return penalties;
-	}
-	
+	}	
 	public int[] redAlliance(){
 		return redAlliance;
 	}
-	
 	public int[] blueAlliance(){
 		return blueAlliance;
-	}
-	
+	}	
 	public int getRedAllianceScore(){
 		return redAllianceScore;
 	}
-	
 	public int getBlueAllianceScore(){
 		return blueAllianceScore;
 	}

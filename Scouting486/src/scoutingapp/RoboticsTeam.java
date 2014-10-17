@@ -16,6 +16,4 @@ public class RoboticsTeam { //I changed this to robotics team and moved it into 
 	public void setPeriods(String periods) {
 		this.periods = periods;
 	}
-	
-
 }
