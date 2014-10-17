@@ -1,6 +1,6 @@
 package scoutingapp;
 
-public class RoboticsTeam {
+public class Robot {
 	String name;
 	String playerType;
 }
