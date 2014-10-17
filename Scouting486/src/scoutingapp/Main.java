@@ -6,8 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		MainMenu mainMenu = new MainMenu();
 		Game game = new Game();
-		game.createNewPointType("high goal", "5", "autonomous");
+		game.createNewPointType("high goal", 5, "autonomous");
 		System.out.println(game.pointTypes);
 	}
-
 }

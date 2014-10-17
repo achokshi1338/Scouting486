@@ -9,8 +9,8 @@ public class Game {
 	ArrayList<String> competitions;
 	public ArrayList<Point> pointTypes;
 	
-	public void createNewPointType(String pointName, String pointValue, String period){
-		newPointType = new Point("high-goal", "autonomous", 5);
+	public void createNewPointType(String pointName, int pointValue, String period){
+		newPointType = new Point("high-goal", "autonomous", pointValue);
 		this.pointTypes.add(newPointType);
 	}
 }
