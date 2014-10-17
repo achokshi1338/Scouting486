@@ -18,5 +18,4 @@ public class Game {
 		Competition newCompetition = new Competition(competitionName);
 		competitions.add(newCompetition);
 	}
-	
 }
