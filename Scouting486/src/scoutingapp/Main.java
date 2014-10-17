@@ -7,6 +7,6 @@ public class Main {
 		MainMenu mainMenu = new MainMenu();
 		Game game = new Game();
 		game.createNewPointType("high goal", 5, "autonomous");
-		System.out.println(game.pointTypes);
+		System.out.println(((Point)game.pointTypes.toArray()[0]).getPointValue());
 	}
 }

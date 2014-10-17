@@ -9,8 +9,8 @@ public class Match {
 	private int blueAllianceScore;
 	private int redAllianceScore;
 	public String gameComments;
-	private ArrayList<Point> pointsScored;
-	private ArrayList<Point> penalties;
+	private ArrayList<Point> pointsScored = new ArrayList<Point>();
+	private ArrayList<Point> penalties = new ArrayList<Point>();
 	private Game game;
 	
 	public Match(int red1, int red2, int red3, int blue1, int blue2, int blue3){
