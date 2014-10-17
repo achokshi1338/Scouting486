@@ -1,6 +1,9 @@
 package scoutingapp;
 
 public class Robot {
-	String name;
+	int teamNumber;
 	String playerType;
+	public Robot(int teamNumber){
+		this.teamNumber = teamNumber;
+	}
 }
