@@ -12,6 +12,10 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class MainMenu extends JFrame implements ActionListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L; //weird eclipse fix--don't worry about this
 	private JPanel contentPane;
 	private JButton btnTeamStatistics;
 	private JButton btnNewMatch;
