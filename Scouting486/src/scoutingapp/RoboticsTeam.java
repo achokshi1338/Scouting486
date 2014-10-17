@@ -1,7 +1,8 @@
+package scoutingapp;
 
-public class Student {
+public class RoboticsTeam { //I changed this to robotics team and moved it into the scouting app package (for now) to make life easier
 	String name;
-	String periods;
+	String periods; //what do you mean by periods
 	public String getName() {
 		return name;
 	}
